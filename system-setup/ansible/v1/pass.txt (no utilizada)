@@ -1,0 +1,4 @@
+ESTA CONTRASEÑA ES LA QUE SE GUARDA EN LOS CLOUD PROVIDER, ES LA QUE ENCRYPTA Y DESENCRYPTA LOS SEC.VAULT
+Comandos: 
+ansible-vault encrypt inventories/prod/group_vars/app2/sec.vault --vault-password-file pass.txt
+ansible-vault decrypt inventories/prod/group_vars/app2/sec.vault --vault-password-file pass.txt

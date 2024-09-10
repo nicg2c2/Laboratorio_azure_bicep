@@ -1,0 +1,8 @@
+---
+- name: "Deploy complements in VM"
+  hosts: 
+    - app1
+  roles:
+    - "docker"
+    - "nginx"
+    - "sonarqube"

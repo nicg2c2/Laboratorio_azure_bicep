@@ -1,0 +1,4 @@
+---
+- include_tasks: 01_pull_and_build_sonar.yml
+- include_tasks: 02_create_network.yml
+- include_tasks: 03_run_sonar_container.yml

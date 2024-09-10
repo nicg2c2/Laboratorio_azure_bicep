@@ -1,0 +1,3 @@
+---
+# Todas las variables que necesita el rol con un valor por defecto, es como un input
+ansible_user: "nicg2c2"

@@ -1,0 +1,6 @@
+- name: "Create network for sonarqube"
+  become: true
+  docker_network:
+    name: 
+      - host
+    state: present

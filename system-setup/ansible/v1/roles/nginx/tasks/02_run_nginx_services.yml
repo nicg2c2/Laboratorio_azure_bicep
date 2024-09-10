@@ -1,0 +1,6 @@
+- name: "run nginx services"
+  become: true
+  service: #lanza un servicio es parecido a "sudo systemctl start nginx"
+    name: nginx
+    state: started     
+

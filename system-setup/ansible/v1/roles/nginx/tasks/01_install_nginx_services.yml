@@ -1,0 +1,14 @@
+- name: "Install nginx services"
+  become: true  
+  apt:
+    name: nginx
+    state: present
+    update_cache: yes
+    
+- name: "Verificar la arquitectura de la máquina"
+  shell: "dpkg --print-architecture"
+  register: architecture_output
+
+- name: "Mostrar la arquitectura"
+  debug:
+    var: architecture_output.stdout

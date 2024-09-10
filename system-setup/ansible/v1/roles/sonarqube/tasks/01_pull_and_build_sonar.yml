@@ -1,0 +1,7 @@
+- name: "Pull sonarqube docker image"
+  become: true
+  community.docker.docker_image_pull:
+    name: sonarqube
+    tag: latest
+    platform: linux/arm64
+    pull: not_present

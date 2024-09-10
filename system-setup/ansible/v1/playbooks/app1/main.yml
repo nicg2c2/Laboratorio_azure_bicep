@@ -1,0 +1,14 @@
+---
+- name: "Deploying VM with Bicep"
+  hosts: localhost
+  tasks:
+    - name: "Execute the deployment of the VM with Bicep"
+      command:
+        cmd: |
+          az deployment group create --resource-group {{resource_group}} --template-file /home/Nicolas/Laboratorios/Periferia/Laboratorio_azure_bicep/main.bicep
+      register: deploy_output 
+      # Almacena la salida del comando en la variable deploy_output.
+
+    - name: "Debug deployment output"
+      debug:
+        var: deploy_output

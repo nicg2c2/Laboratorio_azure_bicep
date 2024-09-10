@@ -1,0 +1,6 @@
+# Se utiliza cuando se realizan pruebas unitarias para ansible para el rol
+---
+- hosts: 
+  remote_user: root
+  roles:
+    - nginx

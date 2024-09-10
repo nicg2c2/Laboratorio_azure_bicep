@@ -1,0 +1,6 @@
+- name: "Ensure Docker is started and enabled at boot"
+  systemd:
+    name: docker
+    enabled: yes
+    state: started
+  become: true

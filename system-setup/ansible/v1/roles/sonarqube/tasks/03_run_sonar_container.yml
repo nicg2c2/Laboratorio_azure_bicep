@@ -1,0 +1,24 @@
+- name: "Run SonarQube container"
+  become: true
+  docker_container:
+    name: sonarqube
+    image: sonarqube:latest
+    state: started
+    ports:
+      - "9000:9000"
+      - "9092:9092"
+    env:
+      SONARQUBE_JDBC_USERNAME: sonar
+      SONARQUBE_JDBC_PASSWORD: sonar
+    volumes:
+      - sonarqube_data:/opt/sonarqube/data 
+      - sonarqube_logs:/opt/sonarqube/logs
+      - sonarqube_extensions:/opt/sonarqube/extensions
+    network_mode: 
+      - host
+    restart_policy: always
+
+# Los volumenes quedaran almacenados en la VM directamente en:
+# /var/lib/docker/volumes/sonarqube_data/_data
+# /var/lib/docker/volumes/sonarqube_logs/_data
+# /var/lib/docker/volumes/sonarqube_extensions/_data

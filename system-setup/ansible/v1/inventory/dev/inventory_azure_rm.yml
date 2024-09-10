@@ -1,0 +1,18 @@
+plugin: azure.azcollection.azure_rm
+auth_source: auto  # Usar autenticación automática
+include_vm_resource_groups:
+  - LaboratorioVM  # Grupo de recursos a incluir
+subscriptions:
+  - f646a8d5-6d52-426f-ad92-4e9bc1bf56e7  # Reemplaza con tu ID de suscripción
+hostnames:
+  - public_ipv4_address[0]
+
+filters:
+  provisioning_state: "succeeded"
+  tag:AsibleGroup: true
+  tag:env:
+    - dev
+
+keyed_groups:
+  - key: tags.AnsibleGroup  # Agrupa los hosts según el valor de la etiqueta AnsibleGroup
+    separator: ""  # Elimina el _ del nombre de los grupos

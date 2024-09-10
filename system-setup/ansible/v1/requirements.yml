@@ -1,0 +1,8 @@
+# Gestor de paquetes ansible galaxy o custom que vamos a utilizar en el proyecto
+---
+collections:
+  - name: azure.azcollection
+    version: 2.6.0
+    
+  - name: community.docker
+    version: 3.12.1
