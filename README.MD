@@ -201,4 +201,3 @@ az deployment group create --resource-group LabVirtualMachine --template-file ma
 6. Configurar la carpeta de playbook, creando dos playbook uno como **main.yml** la cual lo que hara sera crear la VM en AZ y el segundo **config_main.yml** configurara todas las herramientas necesaria en la VM segun el requerimiento.
 
 7. Crear un archivo .py como **execute_playbook.py** el cual ejecutara de forma ordenada los playbook garantizando que la informacion de los inventarios este disponible antes de ejecutar el playbook de configuracion.
-
